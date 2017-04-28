@@ -1,0 +1,18 @@
+# _*_coding:utf-8_*_
+import re
+
+file =open('/home/zheng/下载/数挖2017培训教学资料/week2 Python基础语言讲解/作业/太空旅客.txt','r')
+
+txt=file.read()
+file2=open('/home/zheng/下载/数挖2017培训教学资料/week2 Python基础语言讲解/作业/词典/角色/角色.txt','r')
+
+d={}
+file2=open('/home/zheng/下载/数挖2017培训教学资料/week2 Python基础语言讲解/作业/词典/角色/角色.txt','r')
+for line2 in file2.readlines():
+    key=0
+    value=line2.strip()
+    d[value]=key
+    tuple=re.findall(value,txt)
+    key=len(tuple)
+    print value
+    print key
